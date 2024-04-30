@@ -1,0 +1,82 @@
+.BorderPane{
+-fx-background-color: #282727;
+}
+
+.vBox{
+ -fx-background-color: #282727;
+
+
+}
+
+.vBoxsub{
+ -fx-background-color: #282727;
+
+}
+
+.btn{
+ -fx-background-color: #282727;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+
+}
+.btnsub{
+    -fx-background-color: #3D3C3C;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+
+}
+.btn:hover{
+    -fx-background-color: #7C7979;
+}
+
+.btnsub:hover{
+    -fx-background-color: #7C7979;
+}
+
+.full-size-pane {
+ -fx-background-color: #AAAAF3;
+    -fx-pref-height: 100%;
+
+}
+
+
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar > .increment-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar > .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar > .thumb {
+    -fx-background-color: #8e8e8e;
+    -fx-background-radius: 4px;
+}
+
+.scroll-pane > .scroll-bar > .thumb:hover {
+    -fx-background-color: #707070;
+}
+
+.scroll-pane > .scroll-bar:vertical > .increment-arrow,
+.scroll-pane > .scroll-bar:vertical > .decrement-arrow,
+.scroll-pane > .scroll-bar:horizontal > .increment-arrow,
+.scroll-pane > .scroll-bar:horizontal > .decrement-arrow {
+    -fx-background-color: transparent;
+}

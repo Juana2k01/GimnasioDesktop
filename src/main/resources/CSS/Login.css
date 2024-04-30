@@ -1,0 +1,32 @@
+.btn_login{
+    -fx-background-color: #282727;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+
+.btn_login:hover{
+    -fx-background-color: #7C7979;
+}
+
+.panel_login{
+    -fx-background-color: white;
+    -fx-background-radius: 30 30 30 30;
+    -fx-border-radius: 20 20 20 20;
+}
+
+.label_Login{
+    -fx-text-fill:  #282727;
+    -fx-font-weight: bold;
+}
+
+.field_Login{
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent ;
+    -fx-border-color: #282727;
+}
