@@ -1,9 +1,24 @@
 package Controllers;
 
-import javafx.event.ActionEvent;
+import ENTITY.Empleado;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AdminController {
 
@@ -30,78 +45,192 @@ public class AdminController {
     @FXML
     private Button subMenu6;
 
+    @FXML
+    private Label nombreCliente;
 
+    @FXML
+    private StackPane panelContenido;
 
-    private VBox prueba1;
-    private VBox prueba2;
-    private VBox prueba3;
-    private VBox prueba4;
-    private VBox prueba5;
-    private VBox prueba6;
+    @FXML
+    private ImageView iconsub1;
+
+    @FXML
+    private ImageView iconsub2;
+
+    @FXML
+    private ImageView iconsub3;
+
+    @FXML
+    private ImageView iconsub4;
+
+    @FXML
+    private ImageView iconsub5;
+
+    @FXML
+    private ImageView iconsub6;
+
+    @FXML
+    private AnchorPane opcionesUsuario;
+
+    private Stage stage;
+    private final VBox prueba1;
+    private final VBox prueba2;
+    private final VBox prueba3;
+    private final VBox prueba4;
+    private final VBox prueba5;
+    private final VBox prueba6;
+    private  FXMLLoader loader;
+    private final Pane opcionesSelects;
+
 
     public AdminController() {
 
-        VBox[] pruebas = {prueba1, prueba2, prueba3, prueba4, prueba5, prueba6};
-        Button[][] subButtons = new Button[pruebas.length][2];
-
-        for (int i = 0; i < pruebas.length; i++) {
-            pruebas[i] = new VBox();
-            pruebas[i].setVisible(false);
-            subButtons[i][0] = new Button("Boton " + (i + 1) + ".1");
-            subButtons[i][1] = new Button("Boton " + (i + 1) + ".2");
 
 
-            for (Button button : subButtons[i]) {
-                button.setPrefWidth(223);
-                button.setPrefHeight(25);
-                button.getStyleClass().add("btnsub");
+        opcionesSelects =new Pane();
+
+         Label pruebita = new Label("Hola");
+         opcionesSelects.getStyleClass().add("vBoxsub");
+         opcionesSelects.getChildren().add(pruebita);
+
+
+
+
+
+        prueba1 = new VBox();
+        prueba1.setVisible(false);
+        Button subButton11 = new Button("Clientes");
+        Button BotonEmpleados = new Button("Empleados");
+        subButton11.setPrefWidth(223);
+        subButton11.setPrefHeight(50);
+        BotonEmpleados.setPrefWidth(223);
+        BotonEmpleados.setPrefHeight(50);
+
+
+        prueba1.getStyleClass().add("vBoxsub");
+
+        subButton11.getStyleClass().add("btnsub");
+        BotonEmpleados.getStyleClass().add("btnsub");
+        prueba1.getChildren().addAll(subButton11, BotonEmpleados);
+
+        prueba2 = new VBox();
+        prueba2.setVisible(false);
+        Button subButton21 = new Button("Boton 2.1");
+        Button subButton22 = new Button("Boton 2.2");
+        subButton21.setPrefWidth(223);
+        subButton21.setPrefHeight(50);
+        subButton22.setPrefWidth(223);
+        subButton22.setPrefHeight(50);
+        prueba2.getStyleClass().add("vBox");
+
+        subButton21.getStyleClass().add("btnsub");
+        subButton22.getStyleClass().add("btnsub");
+        prueba2.getChildren().addAll(subButton21, subButton22);
+
+
+        prueba3 = new VBox();
+        prueba3.setVisible(false);
+        Button subButton31 = new Button("Boton 3.1");
+        Button subButton32 = new Button("Boton 3.2");
+        subButton31.setPrefWidth(223);
+        subButton31.setPrefHeight(50);
+        subButton32.setPrefWidth(223);
+        subButton32.setPrefHeight(50);
+        prueba3.getStyleClass().add("vBox");
+        subButton31.getStyleClass().add("btnsub");
+        subButton32.getStyleClass().add("btnsub");
+        prueba3.getChildren().addAll(subButton31, subButton32);
+
+        prueba4 = new VBox();
+        prueba4.setVisible(false);
+        Button subButton41 = new Button("Boton 4.1");
+        Button subButton42 = new Button("Boton 4.2");
+        subButton41.setPrefWidth(223);
+        subButton41.setPrefHeight(50);
+        subButton42.setPrefWidth(223);
+        subButton42.setPrefHeight(50);
+        prueba4.getStyleClass().add("vBox");
+        prueba4.setSpacing(10);
+        subButton41.getStyleClass().add("btnsub");
+        subButton42.getStyleClass().add("btnsub");
+        prueba4.getChildren().addAll(subButton41, subButton42);
+
+        prueba5 = new VBox();
+        prueba5.setVisible(false);
+        Button subButton51 = new Button("Boton 5.1");
+        Button subButton52 = new Button("Boton 5.2");
+        subButton51.setPrefWidth(223);
+        subButton51.setPrefHeight(50);
+        subButton52.setPrefWidth(223);
+        subButton52.setPrefHeight(50);
+        prueba5.getStyleClass().add("vBox");
+        prueba5.setSpacing(10);
+        subButton51.getStyleClass().add("btnsub");
+        subButton52.getStyleClass().add("btnsub");
+        prueba5.getChildren().addAll(subButton51, subButton52);
+
+        prueba6 = new VBox();
+        prueba6.setVisible(false);
+        Button subButton61 = new Button("Boton 6.1");
+        Button subButton62 = new Button("Boton 6.2");
+        subButton61.setPrefWidth(223);
+        subButton61.setPrefHeight(50);
+        subButton62.setPrefWidth(223);
+        subButton62.setPrefHeight(50);
+        prueba6.getStyleClass().add("vBox");
+        prueba6.setSpacing(10);
+        subButton61.getStyleClass().add("btnsub");
+        subButton62.getStyleClass().add("btnsub");
+        prueba6.getChildren().addAll(subButton61, subButton62);
+
+
+        BotonEmpleados.setOnAction(event -> {
+            try {
+                handleBotonEmpleados();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
+        });
 
 
-            pruebas[i].getStyleClass().add("vBoxsub");
-            pruebas[i].getChildren().addAll(subButtons[i]);
-        }
-
-
-        prueba1 = pruebas[0];
-        prueba2 = pruebas[1];
-        prueba3 = pruebas[2];
-        prueba4 = pruebas[3];
-        prueba5 = pruebas[4];
-        prueba6 = pruebas[5];
     }
 
 
-
-    public void mostrarOpciones1(ActionEvent actionEvent) {
+    public void mostrarOpciones1() {
         toggleVisibility(prueba1, subMenu1);
+        GirarImagen(iconsub1);
     }
 
     @FXML
-    public void mostrarOpciones2(ActionEvent actionEvent) {
+    public void mostrarOpciones2() {
         toggleVisibility(prueba2, subMenu2);
+        GirarImagen(iconsub2);
     }
     @FXML
-    public void mostrarOpciones3(ActionEvent actionEvent) {
+    public void mostrarOpciones3() {
         toggleVisibility(prueba3, subMenu3);
+        GirarImagen(iconsub3);
     }
 
 
     @FXML
-    public void mostrarOpciones4(ActionEvent actionEvent) {
+    public void mostrarOpciones4() {
         toggleVisibility(prueba4, subMenu4);
+        GirarImagen(iconsub4);
     }
 
     @FXML
-    public void mostrarOpciones5(ActionEvent actionEvent) {
+    public void mostrarOpciones5() {
 
         toggleVisibility(prueba5, subMenu5);
+        GirarImagen(iconsub5);
     }
 
     @FXML
-    public void mostrarOpciones6(ActionEvent actionEvent) {
+    public void mostrarOpciones6() {
 
         toggleVisibility(prueba6, subMenu6);
+        GirarImagen(iconsub6);
     }
 
     private void toggleVisibility(VBox prueba, Button subMenu) {
@@ -111,6 +240,7 @@ public class AdminController {
         } else {
             vboxOpciones.getChildren().remove(prueba);
         }
+
         actualizarScrollPane();
     }
 
@@ -122,6 +252,58 @@ public class AdminController {
         vboxOpciones.getParent().requestLayout();
     }
 
+ // Aqui asigno el Nombre del Empleado a la Label
+    public void EmpleadoInciado (Empleado empleado){
+        nombreCliente.setText(empleado.getNombre());
+
+    }
 
 
+
+    private void handleBotonEmpleados() throws IOException {
+        loader = new FXMLLoader(getClass().getResource("/templates/VerEmpleados.fxml"));
+        Node contenidoEmpleado = loader.load();
+
+        VerEmpleadosController controller = loader.getController();
+        if (controller != null) {
+            System.out.println("Controlador obtenido correctamente en AdminController.");
+        } else {
+            System.out.println("¡ADVERTENCIA! No se pudo obtener el controlador en AdminController.");
+        }
+
+        controller.setStage(stage);
+
+        panelContenido.getChildren().clear();
+        panelContenido.getChildren().add(contenidoEmpleado);
+    }
+
+    private void GirarImagen (ImageView imageView){
+        if (imageView.getRotate()==90){
+            imageView.setRotate(0);
+        } else{
+            imageView.setRotate(90);
+        }
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    public void mostraropciones(MouseEvent mouseEvent) {
+        if (panelContenido.getChildren().contains(opcionesSelects)) {
+
+            panelContenido.getChildren().remove(opcionesSelects);
+        }else {
+
+
+            opcionesSelects.setMinSize(50, 50);
+            opcionesSelects.setMaxSize(150, 50);
+
+
+            StackPane.setAlignment(opcionesSelects, Pos.TOP_RIGHT);
+            StackPane.setMargin(opcionesSelects, new Insets(0, 20, 0, 0));
+
+            panelContenido.getChildren().add(opcionesSelects);
+        }
+        }
 }

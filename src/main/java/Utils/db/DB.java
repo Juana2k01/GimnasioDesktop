@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DB {
+    private static DB instance;
     private static final String DB_NAME = "gimnasio";
     private static final String USERNAME = "juan";
     private static final String PASSWORD = "juan";
@@ -22,6 +23,12 @@ public class DB {
         }
     }
 
+    public static synchronized DB getInstance(){
+        if(instance == null){
+            instance = new DB();
+        }
+        return  instance;
+    }
     public static Connection getConnection() {
         return connection;
     }

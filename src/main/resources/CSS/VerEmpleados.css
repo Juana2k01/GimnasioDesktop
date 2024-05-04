@@ -1,67 +1,58 @@
+
 .BorderPane{
-    -fx-background-color:  #262626;
+    -fx-background-color: #282727;
 }
 
 .vBox{
-    -fx-background-color:  #262626;
+    -fx-background-color: #282727;
 
 
+}
+
+.head{
+ -fx-background-color: #a9c7e5;
+}
+.Label_Titulo{
+ -fx-text-fill:  #282727;
+    -fx-font-weight: bold;
 }
 
 .panelCentral{
-    -fx-background-color: #262626;
+    -fx-background-color:  #ebeef1;
 }
 
-.vBoxsub{
-    -fx-background-color: #131313;
-
+.Nombre{
+    -fx-text-fill: black;
+    -fx-font-size: 30px;
+}
+.NombreH{
+    -fx-text-fill: white;
 }
 
-.btn{
-    -fx-background-color:  #262626;
-    -fx-text-fill: #FFFFFF;
-    -fx-font-size: 15px;
-    -fx-font-family: "Arial Rounded MT Bold";
-}
 
-.Label_Nombre{
--fx-font-family: "Arial Rounded MT Bold";
-}
-.panelUsuario{
-
-    -fx-background-radius: 30 30 30 30;
+.panelContenido{
+    -fx-background-color:   #dee0e2;
+    -fx-background-radius: 20 20 20 20;
     -fx-border-radius: 20 20 20 20;
      -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
 
 }
-.btn_sesionout{
-    -fx-background-color: white;
-    -fx-text-fill: Black;
-    -fx-font-size: 12px;
-     -fx-background-radius: 10 10 10 10;
-        -fx-border-radius: 10 10 10 10;
 
+
+
+
+
+.imagen{
+ -fx-border-radius: 10px;
+     -fx-border-color: black; /* Color del borde */
+     -fx-border-width: 2px;
+    }
+
+
+.prueba {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
 }
 
-.btnsub{
-    -fx-background-color: #232222;
-    -fx-text-fill: #FFFFFF;
-    -fx-font-size: 15px;
-
-}
-.btn:hover{
-    -fx-background-color: #7C7979;
-}
-
-.btnsub:hover{
-    -fx-background-color: #7C7979;
-}
-
-.full-size-pane {
-    -fx-background-color: #AAAAF3;
-    -fx-pref-height: 100%;
-
-}
 
 
 
@@ -104,3 +95,6 @@
 .scroll-pane > .scroll-bar:horizontal > .decrement-arrow {
     -fx-background-color: transparent;
 }
+
+
+

@@ -11,11 +11,7 @@ public class Usuario_ADM {
 
    }
 
-   public Usuario_ADM(int idEmpleado, String username, String password) {
-        this.idEmpleado = idEmpleado;
-        this.username = username;
-        this.password = password;
-    }
+
 
 
     public int getIdEmpleado() {

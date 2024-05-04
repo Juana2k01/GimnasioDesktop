@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="600.0" styleClass="panel_login" stylesheets="@../CSS/RegistroEmpleado.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegistroEmpleadoController">
+   <content>
+      <Pane styleClass="panel_login">
+         <children>
+            <Label layoutX="201.0" layoutY="100.0" styleClass="label_Login" text="DNI:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="140.0" styleClass="label_Login" text="Nombre:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="180.0" styleClass="label_Login" text="Apellido:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="220.0" styleClass="label_Login" text="Email:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="260.0" styleClass="label_Login" text="Sueldo:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="340.0" styleClass="label_Login" text="Cargo:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="14.0" text="FORMULARIO DE REGISTRO DE EMPLEADOS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="48.0" prefHeight="17.0" prefWidth="567.0" />
+            <TextField fx:id="textDNI" layoutX="340.0" layoutY="101.0" promptText="A1234567Z" styleClass="field_Login" />
+            <TextField fx:id="textNombre" layoutX="340.0" layoutY="142.0" promptText="Juan" styleClass="field_Login" />
+            <TextField fx:id="textApellido" layoutX="340.0" layoutY="182.0" promptText="Acuña" styleClass="field_Login" />
+            <TextField fx:id="textEmail" layoutX="340.0" layoutY="223.0" promptText="juanito@ejemplo.com" styleClass="field_Login" />
+            <TextField fx:id="textSueldo" layoutX="340.0" layoutY="262.0" promptText="1900" styleClass="field_Login" />
+            <ChoiceBox fx:id="elegirCargo" layoutX="345.0" layoutY="341.0" prefWidth="150.0" styleClass="field_Login" />
+            <ImageView fx:id="imagenEmpleado" fitHeight="158.0" fitWidth="142.0" layoutX="26.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="201.0" layoutY="300.0" styleClass="label_Login" text="Teléfono:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textTelefono" layoutX="340.0" layoutY="301.0" promptText="1900" styleClass="field_Login" />
+            <Button layoutX="58.0" layoutY="275.0" mnemonicParsing="false" onAction="#cargarFoto" styleClass="btn_login" text="Cargar Foto" />
+            <Button layoutX="59.0" layoutY="316.0" mnemonicParsing="false" onAction="#borrarFoto" styleClass="btn_borrar" text="Borrar Foto" />
+            <Button layoutX="316.0" layoutY="396.0" mnemonicParsing="false" onAction="#borrarTodo" styleClass="btn_borrar" text="Borrar" />
+            <Button layoutX="438.0" layoutY="395.0" mnemonicParsing="false" onAction="#siguiente" styleClass="btn_login" text="Siguiente" />
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
