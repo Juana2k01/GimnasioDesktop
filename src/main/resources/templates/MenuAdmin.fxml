@@ -5,11 +5,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -18,15 +18,15 @@
    <left>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane fx:id="paneOpciones" hbarPolicy="NEVER" layoutY="106.0" prefHeight="370.0" prefWidth="237.0" styleClass="BorderPane" AnchorPane.bottomAnchor="74.0" AnchorPane.topAnchor="0.0">
+            <ScrollPane fx:id="paneOpciones" hbarPolicy="NEVER" layoutY="106.0" prefHeight="476.0" prefWidth="237.0" styleClass="BorderPane" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="0.0">
                <content>
                   <VBox fx:id="vboxOpciones" maxHeight="780.0" prefWidth="237.0" styleClass="vBox">
                      <children>
-                        <Button fx:id="subMenu1" alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#mostrarOpciones1" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Inicio">
+                        <Button fx:id="subMenu1" alignment="BOTTOM_CENTER" graphicTextGap="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Inicio">
                            <graphic>
                               <ImageView fx:id="iconsub1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/home.png" />
+                                    <Image url="@../img/dashboard.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -34,50 +34,53 @@
                               <Font size="28.0" />
                            </font>
                         </Button>
-                        <Button fx:id="subMenu2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="54.0" mnemonicParsing="false" onAction="#mostrarOpciones2" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Gestiones">
+                        <Button fx:id="subMenu2" alignment="BOTTOM_CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#mostrarOpciones2" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Personas">
                            <graphic>
-                              <ImageView fx:id="iconsub2" fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconsub2" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/flecha_submenu.png" />
+                                    <Image url="@../img/Personas.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
                         </Button>
-                        <Button fx:id="subMenu3" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="75.0" mnemonicParsing="false" onAction="#mostrarOpciones3" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Pagos">
+                        <Button fx:id="subMenu3" alignment="BOTTOM_CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#mostrarOpciones3" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Gestiones">
                            <graphic>
-                              <ImageView fx:id="iconsub3" fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconsub3" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/flecha_submenu.png" />
+                                    <Image url="@../img/area_servicios.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="subMenu4" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="72.0" mnemonicParsing="false" onAction="#mostrarOpciones4" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Button">
+                        <Button fx:id="subMenu4" alignment="BOTTOM_CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#mostrarOpciones4" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Reservas">
                            <graphic>
-                              <ImageView fx:id="iconsub4" fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconsub4" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/flecha_submenu.png" />
+                                    <Image url="@../img/reservaAct.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="subMenu5" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="72.0" mnemonicParsing="false" onAction="#mostrarOpciones5" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Button">
+                        <Button fx:id="subMenu5" alignment="BOTTOM_CENTER" graphicTextGap="35.0" mnemonicParsing="false" onAction="#mostrarOpciones5" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Pagos">
                            <graphic>
-                              <ImageView fx:id="iconsub5" fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconsub5" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/flecha_submenu.png" />
+                                    <Image url="@../img/reporte.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="subMenu6" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="72.0" mnemonicParsing="false" onAction="#mostrarOpciones6" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Button">
+                        <Button fx:id="subMenu6" alignment="BOTTOM_CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#mostrarIns" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Inscripcion">
                            <graphic>
-                              <ImageView fx:id="iconsub6" fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconsub6" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/flecha_submenu.png" />
+                                    <Image url="@../img/inscripcion.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -86,19 +89,6 @@
                   </VBox>
                </content>
             </ScrollPane>
-            <Pane layoutY="298.0" prefHeight="44.0" prefWidth="242.0" styleClass="BorderPane" AnchorPane.bottomAnchor="15.0">
-               <children>
-                  <Button layoutX="60.0" mnemonicParsing="false" styleClass="btn_sesionout" text="Cerrar Sesión">
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/cerrarSesion.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </Pane>
          </children>
       </AnchorPane>
    </left>
@@ -115,22 +105,22 @@
                   <Font name="Arial Rounded MT Bold" size="48.0" />
                </font>
             </Label>
-            <AnchorPane fx:id="opcionesUsuario" layoutX="432.0" layoutY="16.0" onMouseClicked="#mostraropciones" prefHeight="47.0" prefWidth="206.0" styleClass="panelUsuario" AnchorPane.rightAnchor="15.0">
+            <AnchorPane fx:id="opcionesUsuario" layoutX="432.0" layoutY="16.0" onMouseClicked="#mostraropciones" prefWidth="170.0" styleClass="panelUsuario" AnchorPane.rightAnchor="13.0">
                <children>
                   <Label fx:id="nombreCliente" layoutX="71.0" layoutY="7.0" styleClass="Label_Nombre" text="Label" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="7.0">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="147.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="13.0">
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="132.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="15.0">
                      <image>
                         <Image url="@../img/flecha_submenu.png" />
                      </image>
                      <cursor>
-                        <Cursor fx:constant="NONE" />
+                        <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="22.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="7.0">
+                  <ImageView fx:id="fotoUsuario" fitHeight="25.0" fitWidth="25.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="7.0">
                      <image>
                         <Image url="@../img/cliente.png" />
                      </image>
@@ -140,6 +130,12 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
             </AnchorPane>
+            <TextField layoutX="216.0" layoutY="21.0" prefHeight="31.0" prefWidth="193.0" promptText="Buscar: Persona, Actividad, etc.." styleClass="field_buscar" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="244.0" />
+            <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="414.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="205.0">
+               <image>
+                  <Image url="@../img/lupa.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </top>

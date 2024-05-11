@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panelDetalles" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DetallesPersonaController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#131313" height="466.0" layoutX="-4.0" layoutY="136.0" stroke="BLACK" strokeType="INSIDE" width="325.0" />
+      <Circle fill="WHITE" layoutX="161.0" layoutY="117.0" radius="90.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="nombrecito" layoutX="122.0" layoutY="212.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="foto" fitHeight="150.0" fitWidth="150.0" layoutX="86.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cliente.png" />
+         </image></ImageView>
+      <Label fx:id="cargo" layoutX="140.0" layoutY="257.0" text="Label" textFill="WHITE" />
+      <Button fx:id="cerrarPanel" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#cerrarPanel" text="Cerrar" />
+      <Label fx:id="labelTelefono" layoutX="225.0" layoutY="320.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEmail" layoutX="108.0" layoutY="350.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="283.0" text="Contacto:" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="380.0" text="Fecha de Contratación:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelFecha" layoutX="225.0" layoutY="380.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="320.0" text="Teléfono:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="350.0" text="Email:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="410.0" text="Sueldo:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSueldo" layoutX="225.0" layoutY="410.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEdad" layoutX="144.0" layoutY="239.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

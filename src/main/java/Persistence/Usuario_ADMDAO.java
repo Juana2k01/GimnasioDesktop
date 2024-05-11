@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.sql.*;
 
 
-
 public class Usuario_ADMDAO {
 
     private Connection connection;
@@ -22,16 +21,18 @@ public class Usuario_ADMDAO {
         Boolean Respuesta = false;
         String query = "SELECT  Username, Password_ FROM usuarios_adm WHERE Username = ? AND Password_ = ?";
 
-             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, usuarioAdm.getUsername());
-            statement.setString(2, usuarioAdm.getPassword());
-             ResultSet resultSet = statement.executeQuery();
-                if (resultSet.next()) {
-                    Respuesta = true;
-                } else { Respuesta = false;}
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, usuarioAdm.getUsername());
+        statement.setString(2, usuarioAdm.getPassword());
+        ResultSet resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+            Respuesta = true;
+        } else {
+            Respuesta = false;
+        }
 
 
-        return  Respuesta;
+        return Respuesta;
     }
     // Aqui recibo un usuarioadm proporcionado por el Login Controller y devuelvo un tipo de dato int del id_empleado de ese empleado
 
@@ -61,5 +62,56 @@ public class Usuario_ADMDAO {
         return empleadoDAO.getEmpleadoConID(idEmpleado);
     }
 
+
+    public Usuario_ADM getUsuario(Empleado empleado) throws SQLException {
+
+
+        Usuario_ADM usuarioAdm = new Usuario_ADM();
+
+
+        String query = "SELECT Username, Password_ FROM usuarios_adm WHERE id_empleado = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setInt(1, empleado.getIdEmpleado());
+
+
+        ResultSet resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+
+            usuarioAdm.setUsername(resultSet.getString("Username"));
+            usuarioAdm.setPassword(resultSet.getString("Password_"));
+        }
+
+        resultSet.close();
+        statement.close();
+
+
+
+
+        return usuarioAdm;
+    }
+
+
+    public void IngresarUsuario(Usuario_ADM usuarioAdm){
+
+
+            String query = "INSERT INTO usuarios_adm (id_empleado, Username, Password_) VALUES (?, ?, ?)";
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, usuarioAdm.getIdEmpleado());
+            statement.setString(2, usuarioAdm.getUsername());
+            statement.setString(3, usuarioAdm.getPassword());
+            statement.executeUpdate();
+
+
+
+        } catch (Exception e) {
+        }
+
+
+
+
+
+    }
 
 }

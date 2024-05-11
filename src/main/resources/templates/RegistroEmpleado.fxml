@@ -14,7 +14,7 @@
    <content>
       <Pane styleClass="panel_login">
          <children>
-            <Label layoutX="201.0" layoutY="100.0" styleClass="label_Login" text="DNI:">
+            <Label layoutX="201.0" layoutY="80.0" styleClass="label_Login" text="DNI:">
                <font>
                   <Font size="18.0" />
                </font>
@@ -50,8 +50,8 @@
                </font>
             </Label>
             <Separator layoutX="16.0" layoutY="48.0" prefHeight="17.0" prefWidth="567.0" />
-            <TextField fx:id="textDNI" layoutX="340.0" layoutY="101.0" promptText="A1234567Z" styleClass="field_Login" />
-            <TextField fx:id="textNombre" layoutX="340.0" layoutY="142.0" promptText="Juan" styleClass="field_Login" />
+            <TextField fx:id="textDNI" layoutX="340.0" layoutY="80.0" promptText="A1234567Z" styleClass="field_Login" />
+            <TextField fx:id="textNombre" layoutX="340.0" layoutY="145.0" promptText="Juan" styleClass="field_Login" />
             <TextField fx:id="textApellido" layoutX="340.0" layoutY="182.0" promptText="Acuña" styleClass="field_Login" />
             <TextField fx:id="textEmail" layoutX="340.0" layoutY="223.0" promptText="juanito@ejemplo.com" styleClass="field_Login" />
             <TextField fx:id="textSueldo" layoutX="340.0" layoutY="262.0" promptText="1900" styleClass="field_Login" />
@@ -67,6 +67,12 @@
             <Button layoutX="59.0" layoutY="316.0" mnemonicParsing="false" onAction="#borrarFoto" styleClass="btn_borrar" text="Borrar Foto" />
             <Button layoutX="316.0" layoutY="396.0" mnemonicParsing="false" onAction="#borrarTodo" styleClass="btn_borrar" text="Borrar" />
             <Button layoutX="438.0" layoutY="395.0" mnemonicParsing="false" onAction="#siguiente" styleClass="btn_login" text="Siguiente" />
+            <Label layoutX="203.0" layoutY="115.0" styleClass="label_Login" text="Usuario">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textUsuario" layoutX="340.0" layoutY="115.0" promptText="usuario" styleClass="field_Login" />
          </children>
       </Pane>
    </content>

@@ -2,12 +2,14 @@ package jyl.desktopgimnasio;
 
 import Controllers.LoginController;
 import Controllers.VerEmpleadosController;
+import Utils.Correos;
 import Utils.db.DB;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -17,12 +19,14 @@ public class HelloApplication extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/templates/LOGIN.fxml"));
         Scene scene = new Scene(loader.load());
+
         stage.setTitle("Iniciar Sesión");
         stage.setMaximized(false);
         stage.setResizable(false);
 
         Image icono = new Image(String.valueOf(getClass().getResource("/img/loguito.png")));
         stage.getIcons().add(icono);
+
 
 
 
@@ -36,6 +40,10 @@ public class HelloApplication extends Application {
 
 
         stage.show();
+
+
+
+
 
 
 

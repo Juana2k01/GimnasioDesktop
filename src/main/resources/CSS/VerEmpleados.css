@@ -1,10 +1,10 @@
 
 .BorderPane{
-    -fx-background-color: #282727;
+    -fx-background-color: #131313;
 }
 
 .vBox{
-    -fx-background-color: #282727;
+    -fx-background-color: #131313;
 
 
 }
@@ -13,29 +13,41 @@
  -fx-background-color: #a9c7e5;
 }
 .Label_Titulo{
- -fx-text-fill:  #282727;
+ -fx-text-fill:  White;
     -fx-font-weight: bold;
 }
+
+-fx-text-fill:  white;
+    -fx-font-weight: bold;
 
 .panelCentral{
     -fx-background-color:  #ebeef1;
 }
 
 .Nombre{
-    -fx-text-fill: black;
-    -fx-font-size: 30px;
+    -fx-text-fill:  white;
+     -fx-font-weight: bold;
+    -fx-font-size: 15px;
 }
 .NombreH{
-    -fx-text-fill: white;
+    -fx-text-fill: green;
 }
 
 
 .panelContenido{
-    -fx-background-color:   #dee0e2;
+    -fx-background-color:   #262626;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+
+
+}
+
+.panelContenidoHover{
+
     -fx-background-radius: 20 20 20 20;
     -fx-border-radius: 20 20 20 20;
      -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
-
+    -fx-border-color: white;
 }
 
 

@@ -27,6 +27,19 @@
 .Label_Nombre{
 -fx-font-family: "Arial Rounded MT Bold";
 }
+.label_opcionesUsuario{
+    -fx-text-fill:  white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.label_opcionesUsuarioHover{
+    -fx-text-fill:  green;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+
 .panelUsuario{
 
     -fx-background-radius: 30 30 30 30;
@@ -44,7 +57,7 @@
 }
 
 .btnsub{
-    -fx-background-color: #232222;
+    -fx-background-color: #131313;
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 15px;
 
@@ -61,6 +74,15 @@
     -fx-background-color: #AAAAF3;
     -fx-pref-height: 100%;
 
+}
+
+.field_buscar{
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent ;
+    -fx-border-color: white;
 }
 
 

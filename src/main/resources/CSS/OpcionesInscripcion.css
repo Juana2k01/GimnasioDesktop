@@ -1,0 +1,32 @@
+.BorderPane{
+    -fx-background-color:  #262626;
+}
+
+.vBox{
+    -fx-background-color:  #262626;
+
+
+}
+
+.btn_login{
+    -fx-background-color: #282727;
+    -fx-border-color: #FFFFFF;
+
+    -fx-text-fill:  white;
+     -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+
+
+.btn_loginH{
+    -fx-background-color: #282727;
+    -fx-border-color: #45cae9;
+
+    -fx-text-fill:  #45cae9;
+     -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}

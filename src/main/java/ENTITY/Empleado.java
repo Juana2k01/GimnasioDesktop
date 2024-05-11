@@ -1,10 +1,15 @@
 package ENTITY;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Empleado {
     private int idEmpleado;
     private String DNI;
     private String nombre;
     private String apellido;
+    private String genero;
+    private Date fecha_nacimiento;
     private String Email;
     private Double sueldo;
     private int rolid;
@@ -15,6 +20,21 @@ public class Empleado {
 
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Date getFecha_nacimiento() {
+        return fecha_nacimiento;
+    }
+
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
 
     public byte[] getImagen() {
         return Imagen;

@@ -11,6 +11,8 @@ module jyl.desktopgimnasio {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires java.desktop;
+    requires javax.mail;
 
 
     opens jyl.desktopgimnasio to javafx.fxml;
