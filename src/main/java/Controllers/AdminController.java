@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
-// Eric Was Here ↓
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,6 +18,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.ByteArrayInputStream;
@@ -29,43 +29,16 @@ import java.util.Objects;
 
 public class AdminController {
 
-
-    @FXML
-    private VBox vboxOpciones;
-
-
-
-    @FXML
-    private Button subMenu2;
-
-    @FXML
-    private Button subMenu3;
-
-    @FXML
-    private Button subMenu4;
-
-    @FXML
-    private Button subMenu5;
-
-
-
-
-    @FXML
-    private Label nombreCliente;
-
-    @FXML
-    private StackPane panelContenido;
-
-
-
-
-
-
-    @FXML
-    private ImageView fotoUsuario;
+    @FXML private VBox vboxOpciones;
+    @FXML private Button subMenu2;
+    @FXML private Button subMenu3;
+    @FXML private Button subMenu4;
+    @FXML private Button subMenu5;
+    @FXML private Label nombreCliente;
+    @FXML private StackPane panelContenido;
+    @FXML private ImageView fotoUsuario;
 
     private Stage stage;
-
     private final VBox usuarios;
     private final VBox gestiones;
     private final VBox reservas;
@@ -75,67 +48,61 @@ public class AdminController {
     private final Label cerrarSesion;
     private final ArrayList<ImageView> Imagenes;
 
+
+
+
+
+
+    public void initialize() {
+
+
+
+
+    }
+
+
     public AdminController() {
 
+
+
+
         opcionesSelects = new Pane();
-
-
         Label pruebita = new Label("Hola");
         pruebita.getStyleClass().add("label_opcionesUsuario");
         opcionesSelects.getStyleClass().add("vBoxsub");
         opcionesSelects.getChildren().add(pruebita);
-
         cerrarSesion = new Label("Cerrar Sesion");
-
-
         cerrarSesion.getStyleClass().add("label_opcionesUsuario");
         opcionesSelects.getChildren().add(cerrarSesion);
         cerrarSesion.setLayoutX(30);
         cerrarSesion.setLayoutY(20);
-
-
         cerrarSesion.hoverProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
-
                 cerrarSesion.getStyleClass().add("label_opcionesUsuarioHover");
-
-
             } else {
-
                 cerrarSesion.getStyleClass().remove("label_opcionesUsuarioHover");
-
             }
         });
 
         pruebita.hoverProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
-
-
                 pruebita.getStyleClass().add("label_opcionesUsuarioHover");
-
             } else {
-
                 pruebita.getStyleClass().remove("label_opcionesUsuarioHover");
             }
         });
-
-
         opcionesSelects.setMinSize(50, 50);
-
         opcionesSelects.setMaxSize(150, 50);
-
-
-
         Image clienteImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/clienteIMG.png")));
         Image empleadoImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/trabajador.png")));
         Image actividadImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/actividades.png")));
-        Image competenciaImage = new Image(getClass().getResourceAsStream("/img/competencia.png"));
-        Image reservaActImage = new Image(getClass().getResourceAsStream("/img/eventos.png"));
-        Image reservaComImage = new Image(getClass().getResourceAsStream("/img/competencias.png"));
-        Image pagarImage = new Image(getClass().getResourceAsStream("/img/pagar.png"));
-        Image transaccionImage = new Image(getClass().getResourceAsStream("/img/transaccion.png"));
-        Imagenes = new ArrayList<>();
+        Image competenciaImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/competencia.png")));
+        Image reservaActImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/eventos.png")));
+        Image reservaComImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/competencias.png")));
+        Image pagarImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/pagar.png")));
+        Image transaccionImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/transaccion.png")));
 
+        Imagenes = new ArrayList<>();
         anadirImagen(clienteImage);
         anadirImagen(empleadoImage);
         anadirImagen(actividadImage);
@@ -146,11 +113,10 @@ public class AdminController {
         anadirImagen(transaccionImage);
         ConfiguracionImagenes(Imagenes);
 
-
         String[]Contenido = {"Clientes","Empleados","Actividades","Competencias","Actividades","Competencias","Realizar Pago","Ver Transacciones", "Clientes", "Empleados"};
 
-
         ArrayList<Button>Botones = new ArrayList<>();
+
         Button btnClientes = new Button();
         Button btnEmpleados = new Button();
         Button bntAct = new Button();
@@ -172,7 +138,6 @@ public class AdminController {
         Botones.add(btnTransferencias);
         Botones.add(btnInsCliente);
         Botones.add(btnInsEmp);
-
         ConfiguracionBotones(Botones,Contenido);
 
 
@@ -199,19 +164,6 @@ public class AdminController {
         pagos.getStyleClass().add("vBox");
         pagos.getChildren().addAll(btnPagar, btnTransferencias);
 
-        VBox inscripciones = new VBox();
-        inscripciones.setVisible(false);
-        inscripciones.getStyleClass().add("vBox");
-        inscripciones.getChildren().addAll(btnInsCliente,btnInsEmp);
-
-
-
-
-
-
-
-
-
         btnEmpleados.setOnAction(event -> {
             try {
                 handleBotonEmpleados();
@@ -221,7 +173,6 @@ public class AdminController {
         });
 
 
-
         cerrarSesion.setOnMouseClicked(event -> {
             try {
                 cerrarSesion();
@@ -229,10 +180,7 @@ public class AdminController {
                 throw new RuntimeException(e);
             }
         });
-
-
     }
-
 
 
 
@@ -286,8 +234,6 @@ public void ConfiguracionBotones(ArrayList<Button>Botones, String[] Contenido){
         volverVisible(pagos, subMenu5);
 
     }
-
-
 
 
     private void volverVisible(VBox prueba, Button subMenu) {
@@ -399,7 +345,8 @@ public void ConfiguracionBotones(ArrayList<Button>Botones, String[] Contenido){
         loginStage.setMaximized(false);
         loginStage.setResizable(false);
         loginStage.setScene(scene);
-
+        Image icono = new Image(String.valueOf(getClass().getResource("/img/loguito.png")));
+        loginStage.getIcons().add(icono);
 
         LoginController loginController = loader.getController();
         loginController.setStage(loginStage);

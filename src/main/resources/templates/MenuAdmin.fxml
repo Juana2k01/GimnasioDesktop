@@ -18,9 +18,9 @@
    <left>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane fx:id="paneOpciones" hbarPolicy="NEVER" layoutY="106.0" prefHeight="476.0" prefWidth="237.0" styleClass="BorderPane" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="0.0">
+            <ScrollPane fx:id="paneOpciones" hbarPolicy="NEVER" layoutY="106.0" prefHeight="476.0" prefWidth="237.0" styleClass="BorderPane" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="0.0">
                <content>
-                  <VBox fx:id="vboxOpciones" maxHeight="780.0" prefWidth="237.0" styleClass="vBox">
+                  <VBox fx:id="vboxOpciones" maxHeight="780.0" prefWidth="237.0" spacing="5.0" styleClass="vBox">
                      <children>
                         <Button fx:id="subMenu1" alignment="BOTTOM_CENTER" graphicTextGap="40.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" styleClass="btn" text="Inicio">
                            <graphic>
@@ -130,7 +130,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
             </AnchorPane>
-            <TextField layoutX="216.0" layoutY="21.0" prefHeight="31.0" prefWidth="193.0" promptText="Buscar: Persona, Actividad, etc.." styleClass="field_buscar" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="244.0" />
+            <TextField layoutX="216.0" layoutY="21.0" prefHeight="31.0" prefWidth="193.0" promptText="Buscar: Persona, Actividad, etc.." styleClass="field_buscar" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="244.0" />
             <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="414.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="205.0">
                <image>
                   <Image url="@../img/lupa.png" />

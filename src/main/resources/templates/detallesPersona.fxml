@@ -9,9 +9,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="panelDetalles" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DetallesPersonaController">
+<Pane fx:id="panelDetalles" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: black;" stylesheets="@../CSS/DetallesPersona.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DetallesPersonaController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#131313" height="466.0" layoutX="-4.0" layoutY="136.0" stroke="BLACK" strokeType="INSIDE" width="325.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#131313" height="466.0" layoutY="136.0" stroke="TRANSPARENT" strokeType="INSIDE" width="320.0" />
       <Circle fill="WHITE" layoutX="161.0" layoutY="117.0" radius="90.0" stroke="WHITE" strokeType="INSIDE" />
       <Label fx:id="nombrecito" layoutX="122.0" layoutY="212.0" text="Label" textFill="WHITE">
          <font>
@@ -74,5 +74,23 @@
             <Font size="11.0" />
          </font>
       </Label>
+      <Button fx:id="btnPDF" layoutX="34.0" layoutY="501.0" mnemonicParsing="false" onAction="#pdfGen" styleClass="btn_pdf">
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pdf.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="186.0" layoutY="501.0" mnemonicParsing="false" onAction="#editarDatosEmpleado" styleClass="btn_pdf">
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/editar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

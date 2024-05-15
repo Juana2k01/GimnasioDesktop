@@ -1,0 +1,16 @@
+.btn_pdf{
+    -fx-background-color: #131313;
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-background-radius: 50 50 50 50;
+    -fx-border-radius: 50 50 50 50;
+}
+.btn_pdfH{
+    -fx-background-color: #282727;
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-background-radius: 50 50 50 50;
+    -fx-border-radius: 50 50 50 50;
+}

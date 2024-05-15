@@ -2,6 +2,7 @@ package jyl.desktopgimnasio;
 
 import Controllers.LoginController;
 import Controllers.VerEmpleadosController;
+import Utils.ContraAutomatica;
 import Utils.Correos;
 import Utils.db.DB;
 import javafx.application.Application;
@@ -26,6 +27,8 @@ public class HelloApplication extends Application {
 
         Image icono = new Image(String.valueOf(getClass().getResource("/img/loguito.png")));
         stage.getIcons().add(icono);
+
+
 
 
 

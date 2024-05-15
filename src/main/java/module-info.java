@@ -13,6 +13,11 @@ module jyl.desktopgimnasio {
     requires java.sql;
     requires java.desktop;
     requires javax.mail;
+    requires kernel;
+    requires io;
+    requires layout;
+    requires styled.xml.parser;
+    requires javafx.swing;
 
 
     opens jyl.desktopgimnasio to javafx.fxml;

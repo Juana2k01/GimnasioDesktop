@@ -1,0 +1,19 @@
+.panel_login{
+    -fx-background-color: #2A2B2B;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+
+.label_Login{
+    -fx-text-fill:  white;
+    -fx-font-weight: bold;
+}
+
+.field_Login{
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent ;
+    -fx-border-color: white;
+}

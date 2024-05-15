@@ -14,10 +14,28 @@ public class Empleado {
     private Double sueldo;
     private int rolid;
     private int Telefono;
+    private Date fecha_alta;
     private byte[] Imagen;
+    private int estado_empleado;
 
     public Empleado(){
 
+    }
+
+    public int getEstado_empleado() {
+        return estado_empleado;
+    }
+
+    public void setEstado_empleado(int estado_empleado) {
+        this.estado_empleado = estado_empleado;
+    }
+
+    public Date getFecha_alta() {
+        return fecha_alta;
+    }
+
+    public void setFecha_alta(Date fecha_alta) {
+        this.fecha_alta = fecha_alta;
     }
 
     public String getGenero() {
